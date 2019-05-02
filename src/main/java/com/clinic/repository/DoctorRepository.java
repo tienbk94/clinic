@@ -1,14 +1,9 @@
 package com.clinic.repository;
 
-import java.util.List;
-
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.clinic.model.Doctor;
 
-public interface DoctorRepository extends Repository<Doctor, Integer>{
+public interface DoctorRepository extends JpaRepository<Doctor, Integer>{
 	
-	@Query("Select c from Doctor c")
-	List<Doctor> getAll();
 }

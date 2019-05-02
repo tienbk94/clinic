@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Edit Doctor</title>
+	</head>
+	<body>
+		<h1>Form</h1>
+	    <form action="/updateDoctor" th:action="@{/updateDoctor}" th:object="${editDoctor}" method="post">
+	    	<p>id: <input type="text" th:field="*{doctorId}"/></p>
+	        <p>Ten Dang Nhap: <input type="text" th:field="*{nameLogin}"/></p>
+	    	<p>Ten: <input type="text" th:field="*{name}"/></p>
+	        <p>Chuyen Khoa: <input type="text" th:field="*{specialist}"/></p>
+	        <p>
+	        	<input type="submit" value="Submit" /> 
+	        	<input type="reset" value="Reset" />
+	        </p>
+	    </form>
+	</body>
+</html>

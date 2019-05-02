@@ -17,8 +17,18 @@
 			<tr th:each="doctor:${doctors}">
 				<td th:text="${doctor.name}"></td>
 				<td th:text="${doctor.specialist}"></td>
+				<td>
+					<a th:href="@{'/editDoctor/' + ${doctor.doctorId}}">edit</a>
+					<a th:href="@{'/deleteDoctor/' + ${doctor.doctorId}}">delete</a>
+				</td>
 			</tr>
 		</table>
+	</div>
+	<div>
+		<a href="/addNewDoctor">add new</a>
+	</div>
+	<div>
+		
 	</div>
 </body>
 </html>

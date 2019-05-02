@@ -8,4 +8,9 @@ public interface IDoctorService {
 	
 	public List<Doctor> getAll();
 	
+	public Doctor findDoctorById(int id);
+	
+	public void saveEditDoctor(Doctor doctor);
+	
+	public void deleteDoctor(Doctor doctor);
 }
