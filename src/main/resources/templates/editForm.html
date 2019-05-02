@@ -7,6 +7,7 @@
 	<body>
 		<h1>Form</h1>
 	    <form action="/updateDoctor" th:action="@{/updateDoctor}" th:object="${editDoctor}" method="post">
+	    	<!-- TODO Id thì để auto increment, ko nên để người dùng nhập vào -->
 	    	<p>id: <input type="text" th:field="*{doctorId}"/></p>
 	        <p>Ten Dang Nhap: <input type="text" th:field="*{nameLogin}"/></p>
 	    	<p>Ten: <input type="text" th:field="*{name}"/></p>

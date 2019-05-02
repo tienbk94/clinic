@@ -71,6 +71,7 @@ public class ClinicController {
     public String deleteDoctor(Model model, @PathVariable(required = true, name = "id") int id) {
         doctorService.deleteDoctor(doctorService.findDoctorById(id));
         model.addAttribute("doctors", doctorService.getAll());
+        // TODO Nên return redirect sang page doctor list
         return "doctorList";
     }
 }
