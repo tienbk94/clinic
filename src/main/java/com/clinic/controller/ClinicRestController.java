@@ -13,7 +13,7 @@ public class ClinicRestController {
     @RequestMapping(value = {"/getListDoctor"}, method = RequestMethod.GET)
     public Doctor getListDoctor(@RequestParam Integer id) {
         Doctor doctor = new Doctor();
-        doctor.setDoctorId(1);
+        doctor.setDoctorId(id);
         doctor.setName("Tien");
         doctor.setNameLogin("tienbk94");
         doctor.setSpecialist("Tien123");
