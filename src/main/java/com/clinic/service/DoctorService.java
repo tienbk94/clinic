@@ -36,4 +36,9 @@ public class DoctorService implements IDoctorService {
 		repository.delete(doctor);
 	}
 
+	@Override
+	public List<Doctor> findDoctorByCondition(String name, String nameLogin) {
+		return repository.findDoctorByCondition(name, nameLogin);
+	}
+
 }

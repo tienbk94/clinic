@@ -13,4 +13,6 @@ public interface IDoctorService {
 	void saveEditDoctor(Doctor doctor);
 	
 	void deleteDoctor(Doctor doctor);
+
+	List<Doctor> findDoctorByCondition(String name, String nameLogin);
 }
