@@ -1,23 +1,20 @@
 package com.clinic.controller;
 
 import com.clinic.model.Doctor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.clinic.service.IDoctorService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/rest/doctor")
 public class ClinicRestController {
 
-    @RequestMapping(value = {"/getListDoctor"}, method = RequestMethod.GET)
-    public Doctor getListDoctor(@RequestParam Integer id) {
-        Doctor doctor = new Doctor();
-        doctor.setDoctorId(id);
-        doctor.setName("Tien");
-        doctor.setNameLogin("tienbk94");
-        doctor.setSpecialist("Tien123");
+    @Autowired
+    private IDoctorService doctorService;
 
-        return doctor;
+    @GetMapping("/getListDoctor")
+    public Doctor getListDoctor(@RequestParam Integer id) {
+
+        return doctorService.findDoctorById(id);
     }
 }

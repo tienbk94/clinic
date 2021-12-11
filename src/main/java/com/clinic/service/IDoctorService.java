@@ -6,11 +6,11 @@ import com.clinic.model.Doctor;
 
 public interface IDoctorService {
 	
-	public List<Doctor> getAll();
+	List<Doctor> getAll();
 	
-	public Doctor findDoctorById(int id);
+	Doctor findDoctorById(int id);
 	
-	public void saveEditDoctor(Doctor doctor);
+	void saveEditDoctor(Doctor doctor);
 	
-	public void deleteDoctor(Doctor doctor);
+	void deleteDoctor(Doctor doctor);
 }
