@@ -1,2 +1,3 @@
 M tạo 1 file schema.sql ( như file text) để tạo DB tự động. Tránh việc t chạy project ko có database.
 hehe
+tuan
