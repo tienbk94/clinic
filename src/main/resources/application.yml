@@ -5,4 +5,4 @@ spring:
     password: tuanpham1294
 
 server:
-  port: 8088
+  port: 8089
