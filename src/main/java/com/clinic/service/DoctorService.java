@@ -27,8 +27,9 @@ public class DoctorService implements IDoctorService {
 	}
 
 	@Override
-	public void saveEditDoctor(Doctor doctor) {
-		repository.save(doctor);
+	public Doctor saveEditDoctor(Doctor doctor) {
+		return repository.save(doctor);
+	
 	}
 
 	@Override
@@ -39,6 +40,11 @@ public class DoctorService implements IDoctorService {
 	@Override
 	public List<Doctor> findDoctorByCondition(String name, String nameLogin) {
 		return repository.findDoctorByCondition(name, nameLogin);
+	}
+
+	@Override
+	public List<Doctor> findDoctorByCondition(String specialist) {
+		return repository.findDoctorByCondition(specialist);
 	}
 
 }
