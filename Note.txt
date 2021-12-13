@@ -2,3 +2,5 @@ M tạo 1 file schema.sql ( như file text) để tạo DB tự động. Tránh 
 hehe
 tuan
 Tien1
+
+name: Tien
