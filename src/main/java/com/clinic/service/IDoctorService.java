@@ -10,9 +10,11 @@ public interface IDoctorService {
 	
 	Doctor findDoctorById(int id);
 	
-	void saveEditDoctor(Doctor doctor);
+	Doctor saveEditDoctor(Doctor doctor);
 	
 	void deleteDoctor(Doctor doctor);
 
 	List<Doctor> findDoctorByCondition(String name, String nameLogin);
+	
+	List<Doctor> findDoctorByCondition(String specialist);
 }

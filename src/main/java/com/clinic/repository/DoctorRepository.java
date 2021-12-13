@@ -14,4 +14,10 @@ public interface DoctorRepository extends JpaRepository<Doctor, Integer>{
             " WHERE doctor.name = :name" +
             " AND doctor.nameLogin = :nameLogin")
     List<Doctor> findDoctorByCondition(String name, String nameLogin);
+    
+    @Query("SELECT doctor" +
+            " FROM Doctor doctor" +
+            " WHERE doctor.specialist LIKE %:specialist%")
+    List<Doctor> findDoctorByCondition(String specialist);
+    
 }
