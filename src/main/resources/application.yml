@@ -5,4 +5,4 @@ spring:
     password: abc123
 
 server:
-  port: 8089
+  port: 8090

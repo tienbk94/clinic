@@ -3,7 +3,6 @@ package com.clinic.controller;
 import com.clinic.model.Doctor;
 import com.clinic.service.IDoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
