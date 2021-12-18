@@ -9,8 +9,8 @@ import com.clinic.model.Schedule;
 
 public interface ScheduleRepository extends JpaRepository<Schedule, Integer> {
 	
-	@Query("SELECT schedule"
+	@Query("SELECT schedule, patient"
 			+ " FROM Schedule schedule INNER JOIN Patient patient ON schedule.patientId = patient.patientId"
 			+ " WHERE schedule.doctorId = :doctorId")
-	List<Schedule> getScheduleByDoctor(Integer doctorId);
+	List<Object[]> getScheduleByDoctor(Integer doctorId);
 }

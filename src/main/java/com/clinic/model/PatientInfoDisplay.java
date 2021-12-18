@@ -1,31 +1,24 @@
 package com.clinic.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.util.Date;
 
-@Entity
-@Table(name = "tbl_benhnhan")
-public class Patient {
+public class PatientInfoDisplay {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer patientId;
 	private String patientName;
 	private int patientAge;
 	private String address;
+	private Date scheduleTime;
 	
-	public Patient() {
+	public PatientInfoDisplay() {
 		
 	}
 	
-	public Integer getPatientId() {
-		return patientId;
-	}
-	public void setPatientId(Integer patientId) {
-		this.patientId = patientId;
+	public PatientInfoDisplay(String patientName, int patientAge, String address, Date scheduleTime) {
+		super();
+		this.patientName = patientName;
+		this.patientAge = patientAge;
+		this.address = address;
+		this.scheduleTime = scheduleTime;
 	}
 	public String getPatientName() {
 		return patientName;
@@ -44,6 +37,12 @@ public class Patient {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	public Date getScheduleTime() {
+		return scheduleTime;
+	}
+	public void setScheduleTime(Date scheduleTime) {
+		this.scheduleTime = scheduleTime;
 	}
 	
 	
