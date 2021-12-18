@@ -2,6 +2,7 @@ package com.clinic.service;
 
 import java.util.List;
 
+import com.clinic.model.PatientInfoDisplay;
 import com.clinic.model.Schedule;
 
 public interface IScheduleService {
@@ -14,5 +15,5 @@ public interface IScheduleService {
 	
 	void deleteSchedule(Schedule schedule);
 
-	List<Schedule> getScheduleByDoctor(Integer doctorId);
+	List<PatientInfoDisplay> getScheduleByDoctor(Integer doctorId);
 }

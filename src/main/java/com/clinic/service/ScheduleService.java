@@ -1,10 +1,13 @@
 package com.clinic.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.clinic.model.Patient;
+import com.clinic.model.PatientInfoDisplay;
 import com.clinic.model.Schedule;
 import com.clinic.repository.ScheduleRepository;
 
@@ -38,9 +41,21 @@ public class ScheduleService implements IScheduleService{
 	}
 
 	@Override
-	public List<Schedule> getScheduleByDoctor(Integer doctorId) {
-		List<Schedule> schedules = scheduleRepository.getScheduleByDoctor(doctorId);
-		return schedules;
+	public List<PatientInfoDisplay> getScheduleByDoctor(Integer doctorId) {
+		List<Object[]> objects = scheduleRepository.getScheduleByDoctor(doctorId);
+		List<PatientInfoDisplay> patientInfoDisplays = new ArrayList<>();
+		for(Object[] object : objects) {
+			Schedule schedule = (Schedule) object[0];
+			Patient patient = (Patient) object[1];
+			
+			patientInfoDisplays.add(new PatientInfoDisplay(patient.getPatientName(), 
+														   patient.getPatientAge(), 
+														   patient.getAddress(), 
+														   schedule.getScheduleTime()));
+			
+		}
+		
+		return patientInfoDisplays;
 	}
 
 }
