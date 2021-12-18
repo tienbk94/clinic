@@ -9,12 +9,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/rest/doctor")
-public class ClinicRestController {
+public class DoctorController {
 
     @Autowired
     private IDoctorService doctorService;
     
-    @PostMapping("/save")
+    @PostMapping("/saveDoctor")
     public Doctor saveDoctor(@RequestBody Doctor doctor) {
     	
     	return doctorService.saveEditDoctor(doctor);
