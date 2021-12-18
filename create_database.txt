@@ -1,0 +1,9 @@
+create database if not exists db_clinic;
+use db_clinic;
+create table tbl_bacsi (
+	doctor_id INT primary key auto_increment,
+    name VARCHAR (50) NOT NULL,
+    name_login VARCHAR (50) NOT NULL,
+    specialist VARCHAR (50)
+);
+select * from tbl_bacsi;

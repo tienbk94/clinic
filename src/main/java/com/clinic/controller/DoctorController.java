@@ -3,19 +3,18 @@ package com.clinic.controller;
 import com.clinic.model.Doctor;
 import com.clinic.service.IDoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/rest/doctor")
-public class ClinicRestController {
+public class DoctorController {
 
     @Autowired
     private IDoctorService doctorService;
     
-    @PostMapping("/save")
+    @PostMapping("/saveDoctor")
     public Doctor saveDoctor(@RequestBody Doctor doctor) {
     	
     	return doctorService.saveEditDoctor(doctor);

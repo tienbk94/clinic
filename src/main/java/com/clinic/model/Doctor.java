@@ -1,6 +1,8 @@
 package com.clinic.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,7 +11,8 @@ import javax.persistence.Table;
 public class Doctor {
 
 	@Id
-	private int doctorId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer doctorId;
 	private String nameLogin;
 	private String name;
 	private String specialist;
@@ -24,10 +27,10 @@ public class Doctor {
 		this.name = name;
 		this.specialist = specialist;
 	}
-	public int getDoctorId() {
+	public Integer getDoctorId() {
 		return doctorId;
 	}
-	public void setDoctorId(int doctorId) {
+	public void setDoctorId(Integer doctorId) {
 		this.doctorId = doctorId;
 	}
 	public String getNameLogin() {
