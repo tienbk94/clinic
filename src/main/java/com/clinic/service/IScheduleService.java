@@ -2,8 +2,8 @@ package com.clinic.service;
 
 import java.util.List;
 
-import com.clinic.model.PatientInfoDisplay;
 import com.clinic.model.Schedule;
+import com.clinic.request.PatientInfoDisplay;
 
 public interface IScheduleService {
 	

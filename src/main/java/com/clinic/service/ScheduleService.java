@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.clinic.model.Patient;
-import com.clinic.model.PatientInfoDisplay;
 import com.clinic.model.Schedule;
 import com.clinic.repository.ScheduleRepository;
+import com.clinic.request.PatientInfoDisplay;
 
 @Service
 public class ScheduleService implements IScheduleService{
