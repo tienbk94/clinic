@@ -38,8 +38,8 @@ public class DoctorService implements IDoctorService {
 	}
 
 	@Override
-	public List<Doctor> findDoctorByCondition(String name, String nameLogin) {
-		return repository.findDoctorByCondition(name, nameLogin);
+	public List<Doctor> findDoctorByName(String doctorName) {
+		return repository.findDoctorByName(doctorName);
 	}
 
 	@Override
