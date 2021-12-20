@@ -13,4 +13,11 @@ public interface ScheduleRepository extends JpaRepository<Schedule, Integer> {
 			+ " FROM Schedule schedule INNER JOIN Patient patient ON schedule.patientId = patient.patientId"
 			+ " WHERE schedule.doctorId = :doctorId")
 	List<Object[]> getScheduleByDoctor(Integer doctorId);
+	
+
+	@Query("SELECT doctor.doctorId, doctor.name, schedule.scheduleTime, patient.patientName"
+			+ " FROM Schedule schedule INNER JOIN Doctor doctor ON schedule.doctorId = doctor.doctorId"
+								   + " INNER JOIN Patient patient ON schedule.patientId = patient.patientId"
+			+ " WHERE doctor.name LIKE %:doctorName%")
+	List<Object[]> getInformationForDoctor(String doctorName);
 }
