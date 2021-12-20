@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.clinic.model.Schedule;
+import com.clinic.request.InformationForDoctor;
 import com.clinic.request.PatientInfoDisplay;
 import com.clinic.service.IScheduleService;
 
@@ -38,5 +39,11 @@ public class ScheduleController {
 	public List<PatientInfoDisplay> getScheduleByDoctor(@RequestParam Integer doctorId) {
 		List<PatientInfoDisplay> patientInfoDisplay = scheduleService.getScheduleByDoctor(doctorId);
 		return patientInfoDisplay;
+	}
+	
+	@GetMapping("/getInformationForDoctor")
+	public List<InformationForDoctor> getInformationForDoctor(@RequestParam String doctorName) {
+		List<InformationForDoctor> informationForDoctors = scheduleService.getInformationForDoctor(doctorName);
+		return informationForDoctors;
 	}
 }
