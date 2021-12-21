@@ -1,12 +1,12 @@
 package com.clinic.service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.clinic.common.Common;
 import com.clinic.model.Patient;
 import com.clinic.model.Schedule;
 import com.clinic.repository.ScheduleRepository;
@@ -50,10 +50,13 @@ public class ScheduleService implements IScheduleService{
 			Schedule schedule = (Schedule) object[0];
 			Patient patient = (Patient) object[1];
 			
+ 			String strScheduleTime =(new Common()).ConvertDateToString(schedule.getScheduleTime());
+			
+			
 			patientInfoDisplays.add(new PatientInfoDisplay(patient.getPatientName(), 
 														   patient.getPatientAge(), 
 														   patient.getAddress(), 
-														   schedule.getScheduleTime()));
+														   strScheduleTime));
 			
 		}
 		
@@ -69,11 +72,9 @@ public class ScheduleService implements IScheduleService{
 			Integer doctorId = (Integer) object[0];
 			String firstName = (String) object[1];
 			String lastName = (String) object[2];
-			Date scheduleTime = (Date) object[3];
-			String patientName = (String) object[4];
+			String patientName = (String) object[3];
 			informationForDoctors.add(new InformationForDoctor(doctorId, 
-															   firstName + " " + lastName, 
-															   scheduleTime,
+															   firstName + " " + lastName,
 															   patientName));
 		}
 		

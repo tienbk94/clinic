@@ -1,18 +1,14 @@
 package com.clinic.request;
 
-import java.util.Date;
-
 public class InformationForDoctor {
 	private Integer doctorId;
 	private String doctorFullName;
-	private Date scheduleTime;
 	private String patientName;
 	
-	public InformationForDoctor(Integer doctorId, String doctorFullName, Date scheduleTime, String patientName) {
+	public InformationForDoctor(Integer doctorId, String doctorFullName, String patientName) {
 		super();
 		this.doctorId = doctorId;
 		this.doctorFullName = doctorFullName;
-		this.scheduleTime = scheduleTime;
 		this.patientName = patientName;
 	}
 
@@ -30,14 +26,6 @@ public class InformationForDoctor {
 
 	public void setDoctorFullName(String doctorFullName) {
 		this.doctorFullName = doctorFullName;
-	}
-
-	public Date getScheduleTime() {
-		return scheduleTime;
-	}
-
-	public void setScheduleTime(Date scheduleTime) {
-		this.scheduleTime = scheduleTime;
 	}
 
 	public String getPatientName() {
