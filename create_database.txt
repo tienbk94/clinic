@@ -7,3 +7,25 @@ create table tbl_bacsi (
     specialist VARCHAR (50)
 );
 select * from tbl_bacsi;
+
+show tables;
+
+use db_clinic;
+create table tbl_benhnhan (
+	patient_id INT primary key auto_increment,
+    patient_name VARCHAR (50) NOT NULL,
+    patient_age INT NOT NULL,
+    address VARCHAR (70)
+);
+select * from tbl_benhnhan;
+
+use db_clinic;
+create table tbl_lichkham (
+	schedule_id INT primary key auto_increment,
+    patient_id INT NOT NULL,
+    doctor_id INT NOT NULL,
+    schedule_time DATE,
+    
+    FOREIGN KEY (doctor_id) REFERENCES tbl_bacsi(doctor_id)
+);
+select * from tbl_lichkham;

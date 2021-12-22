@@ -1,0 +1,36 @@
+use db_clinic;
+SELECT * FROM tbl_bacsi;
+alter table tbl_bacsi add column first_name varchar(50);
+alter table tbl_bacsi rename column name to last_name;
+update tbl_bacsi set last_name = 'Truong Tuan' where doctor_id = 1;
+update tbl_bacsi set last_name = 'Thi Thanh Huyen' where doctor_id = 2;
+update tbl_bacsi set last_name = 'Manh Tien' where doctor_id = 3;
+update tbl_bacsi set last_name = 'Duy Tung' where doctor_id = 4;
+update tbl_bacsi set last_name = 'Duy Nam' where doctor_id = 5;
+update tbl_bacsi set last_name = 'Thi Bich Thuy' where doctor_id = 6;
+update tbl_bacsi set first_name = 'Pham' where doctor_id = 1;
+update tbl_bacsi set first_name = 'Duong' where doctor_id = 2;
+update tbl_bacsi set first_name = 'Nguyen' where doctor_id = 3;
+update tbl_bacsi set first_name = 'Tran' where doctor_id = 4;
+update tbl_bacsi set first_name = 'Nguyen' where doctor_id = 5;
+update tbl_bacsi set first_name = 'Pham' where doctor_id = 6;
+
+
+
+use db_clinic;
+SELECT * FROM tbl_benhnhan;
+alter table tbl_benhnhan add column patient_contact varchar(10);
+update tbl_benhnhan set patient_name = 'Nguyen Thanh Mai' where patient_id = 1;
+update tbl_benhnhan set patient_name = 'Tran My Hong' where patient_id = 2;
+update tbl_benhnhan set patient_name = 'Do Dinh Dat' where patient_id = 3;
+update tbl_benhnhan set patient_name = 'Bui Tuan Dat' where patient_id = 4;
+update tbl_benhnhan set patient_name = 'Nguyen Hong Nhung' where patient_id = 5;
+update tbl_benhnhan set patient_name = 'Do Quang Khai' where patient_id = 6;
+
+
+update tbl_benhnhan set patient_contact = '23543535' where patient_id = 1;
+update tbl_benhnhan set patient_contact = '45674345' where patient_id = 2;
+update tbl_benhnhan set patient_contact = '25673234' where patient_id = 3;
+update tbl_benhnhan set patient_contact = '67345235' where patient_id = 4;
+update tbl_benhnhan set patient_contact = '82554645' where patient_id = 5;
+update tbl_benhnhan set patient_contact = '74562456' where patient_id = 6;
