@@ -11,9 +11,8 @@ public interface DoctorRepository extends JpaRepository<Doctor, Integer>{
 
     @Query("SELECT doctor" +
             " FROM Doctor doctor" +
-            " WHERE doctor.name = :name" +
-            " AND doctor.nameLogin = :nameLogin")
-    List<Doctor> findDoctorByCondition(String name, String nameLogin);
+            " WHERE CONCAT(doctor.firstName, ' ', doctor.lastName) LIKE %:doctorName%")
+    List<Doctor> findDoctorByName(String doctorName);
     
     @Query("SELECT doctor" +
             " FROM Doctor doctor" +

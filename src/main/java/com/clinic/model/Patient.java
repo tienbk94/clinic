@@ -16,6 +16,7 @@ public class Patient {
 	private String patientName;
 	private int patientAge;
 	private String address;
+	private String patientContact;
 	
 	public Patient() {
 		
@@ -44,6 +45,14 @@ public class Patient {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public String getPatientContact() {
+		return patientContact;
+	}
+
+	public void setPatientContact(String patientContact) {
+		this.patientContact = patientContact;
 	}
 	
 	

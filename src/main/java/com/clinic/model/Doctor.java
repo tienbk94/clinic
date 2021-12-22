@@ -14,43 +14,60 @@ public class Doctor {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer doctorId;
 	private String nameLogin;
-	private String name;
+	private String lastName;
 	private String specialist;
+	private String firstName;
 	
 	public Doctor() {
 		
 	}
-	
-	public Doctor(String nameLogin, String name, String specialist) {
+
+	public Doctor(String nameLogin, String lastName, String specialist, String firstName) {
 		super();
 		this.nameLogin = nameLogin;
-		this.name = name;
+		this.lastName = lastName;
 		this.specialist = specialist;
+		this.firstName = firstName;
 	}
+
 	public Integer getDoctorId() {
 		return doctorId;
 	}
+
 	public void setDoctorId(Integer doctorId) {
 		this.doctorId = doctorId;
 	}
+
 	public String getNameLogin() {
 		return nameLogin;
 	}
+
 	public void setNameLogin(String nameLogin) {
 		this.nameLogin = nameLogin;
 	}
-	public String getName() {
-		return name;
+
+	public String getLastName() {
+		return lastName;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
+
 	public String getSpecialist() {
 		return specialist;
 	}
+
 	public void setSpecialist(String specialist) {
 		this.specialist = specialist;
 	}
-	
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 	
 }

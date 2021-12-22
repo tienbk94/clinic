@@ -1,19 +1,17 @@
-package com.clinic.model;
-
-import java.util.Date;
+package com.clinic.request;
 
 public class PatientInfoDisplay {
 	
 	private String patientName;
 	private int patientAge;
 	private String address;
-	private Date scheduleTime;
+	private String scheduleTime;
 	
 	public PatientInfoDisplay() {
 		
 	}
 	
-	public PatientInfoDisplay(String patientName, int patientAge, String address, Date scheduleTime) {
+	public PatientInfoDisplay(String patientName, int patientAge, String address, String scheduleTime) {
 		super();
 		this.patientName = patientName;
 		this.patientAge = patientAge;
@@ -38,10 +36,10 @@ public class PatientInfoDisplay {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Date getScheduleTime() {
+	public String getScheduleTime() {
 		return scheduleTime;
 	}
-	public void setScheduleTime(Date scheduleTime) {
+	public void setScheduleTime(String scheduleTime) {
 		this.scheduleTime = scheduleTime;
 	}
 	
