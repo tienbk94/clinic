@@ -14,7 +14,7 @@ public interface IDoctorService {
 	
 	void deleteDoctor(Doctor doctor);
 
-	List<Doctor> findDoctorByCondition(String name, String nameLogin);
+	List<Doctor> findDoctorByName(String doctorName);
 	
 	List<Doctor> findDoctorByCondition(String specialist);
 }

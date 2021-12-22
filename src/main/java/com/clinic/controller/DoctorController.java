@@ -20,16 +20,16 @@ public class DoctorController {
     	return doctorService.saveEditDoctor(doctor);
     }
 
-    @GetMapping("/getDoctor")
+    @GetMapping("/getDoctorById")
     public Doctor getDoctor(@RequestParam Integer id) {
 
         return doctorService.findDoctorById(id);
     }
 
-    @GetMapping("/getListDoctor")
-    public List<Doctor> getListDoctor(@RequestParam String name, String nameLogin) {
+    @GetMapping("/getDoctorByName")
+    public List<Doctor> getListDoctor(@RequestParam String doctorName) {
 
-        return doctorService.findDoctorByCondition(name, nameLogin);
+        return doctorService.findDoctorByName(doctorName);
     }
     
     @GetMapping("/getAllDoctor")
