@@ -11,4 +11,8 @@ public class Common {
 		String strDate = dateFormat.format(date);
 		return strDate;
 	}
+
+	public void showTheDate(){
+		System.out.println("ngay gio");
+	}
 }
